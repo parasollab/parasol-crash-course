@@ -23,6 +23,7 @@ chmod -R +x docker/ppl-crash-course/scripts/*
 ``` sh
 ppl-cc-build-workspace
 ```
+If you get the following error, `c++: fatal error: Killed signal terminated program cc1plus`, rerun the command in 4.
 
 ### 5. Generate an ssh key
 ``` sh
@@ -36,6 +37,3 @@ To delete all docker containers (docker cache) run:
 ``` sh
 docker system prune -a
 ```
-## ROS 2 Tutorials
-
-### 
