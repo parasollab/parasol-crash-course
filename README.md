@@ -24,6 +24,13 @@ chmod -R +x docker/ppl-crash-course/scripts/*
 ppl-cc-build-workspace
 ```
 
+### 5. Generate an ssh key
+``` sh
+ssh-keygen
+```
+
+### 6. TODO
+
 ### Deleting Containers
 To delete all docker containers (docker cache) run:
 ``` sh
