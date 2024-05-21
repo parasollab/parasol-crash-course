@@ -29,6 +29,3 @@ To delete all docker containers (docker cache) run:
 ``` sh
 docker system prune -a
 ```
-## ROS 2 Tutorials
-
-### 
