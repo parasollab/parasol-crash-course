@@ -32,7 +32,13 @@ ssh-keygen
 
 ### 6. TODO
 
-### Deleting Containers
+## Stop docker container
+To stop the docker container run:
+``` sh
+docker stop $USER-ppl-crash-course-1
+```
+
+## Deleting Containers
 To delete all docker containers (docker cache) run:
 ``` sh
 docker system prune -a
