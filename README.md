@@ -39,12 +39,14 @@ Install docker desktop for your system from [here](https://www.docker.com/produc
 
 <details>
   <summary><h3>MacOS</h3></summary>
-  <details><h4>Intel</h4>
-    <summary>TODO</summary>
+  <details>
+    <summary><h4>Intel</h4></summary>
+    TODO
   </details>
   <br>
-  <details><h4>Apple Silicon</h4>
-    <summary>TODO</summary>
+  <details>
+    <summary><h4>Apple Silicon</h4></summary>
+    TODO
   </details>
   
 </details>
