@@ -3,16 +3,16 @@
 ## Build Docker Container
 
 ### Install Docker Desktop
+
 Install docker desktop for your system from [here](https://www.docker.com/products/docker-desktop/).
+
 <details>
   <summary><h3>Ubuntu</h3></summary>
-  TODO
+  > Fix docker permissions using [this](https://medium.com/@praveenadoni4456/error-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket-at-e68bfab8146a).
 </details>
 
 <details>
   <summary><h3>Windows</h3></summary>
-  Follow the instructions from [here](https://docs.docker.com/desktop/install/windows-install/)
-  <br>
   Install Windows Subsystem for Linux following these [instructions](https://learn.microsoft.com/en-us/windows/wsl/install)
   <br>
   Setup Docker desktop to use WSL 2:
@@ -33,8 +33,7 @@ Install docker desktop for your system from [here](https://www.docker.com/produc
   2. Select the dropdown arrow next to the Windows PowerShell tab at the top of the window and select Ubuntu
   3. Create an ssh key for your WSL 2
   4. Add ssh key to github
-<!--   5. Install xhost using `sudo apt-get update && sudo apt-get install xorg` -->
-  
+  <br>
 </details>
 
 <details>
@@ -46,47 +45,64 @@ Install docker desktop for your system from [here](https://www.docker.com/produc
   <br>
   <details>
     <summary><h4>Apple Silicon</h4></summary>
-    TODO
+    > TODO: Gazebo is not supported on ARM processors. See
   </details>
-  
+
 </details>
 
+### Install Visual Studio Code
+
+1. Install Visual Studio Code from [here](https://code.visualstudio.com/)
+2. Install the Remote - Dev Containers extension from [here](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+
 ### 1. Grant privileges to the scripts
-``` sh
+
+```sh
 chmod -R +x docker/ppl-crash-course/scripts/*
 ```
 
 ### 2. Build docker image
-``` sh
+
+```sh
 ./BUILD-DOCKER-IMAGE.sh
 ```
 
+> If you get issues related to the docker daemon, try [this](https://medium.com/@praveenadoni4456/error-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket-at-e68bfab8146a).
+
 ### 3. Create and run docker container
-``` sh
+
+```sh
 ./RUN-DOCKER-CONTAINER.sh
 ```
 
 ### 4. Build ROS 2 environment inside container
-``` sh
+
+```sh
 ppl-cc-build-workspace
 ```
+
 > If you get the following error, `c++: fatal error: Killed signal terminated program cc1plus`, rerun the command in 4.
 
 ### 5. Generate an ssh key
-``` sh
+
+```sh
 ssh-keygen
 ```
 
 ### 6. TODO
 
 ## Stop docker container
+
 To stop the docker container run:
-``` sh
+
+```sh
 docker stop $USER-ppl-crash-course-1
 ```
 
 ## Deleting Containers
+
 To delete all docker containers (docker cache) run:
-``` sh
+
+```sh
 docker system prune -a
 ```
