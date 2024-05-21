@@ -1,6 +1,7 @@
 # Parasol Planning Lab Crash Course
 
 ## Build Docker Container
+
 ### Install Docker Engine
 Install docker engine from [here](https://docs.docker.com/engine/install/).
 
@@ -23,7 +24,7 @@ chmod -R +x docker/ppl-crash-course/scripts/*
 ``` sh
 ppl-cc-build-workspace
 ```
-If you get the following error, `c++: fatal error: Killed signal terminated program cc1plus`, rerun the command in 4.
+> If you get the following error, `c++: fatal error: Killed signal terminated program cc1plus`, rerun the command in 4.
 
 ### 5. Generate an ssh key
 ``` sh
