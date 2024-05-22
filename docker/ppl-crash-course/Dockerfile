@@ -124,6 +124,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	ros-iron-gazebo-* ros-iron-cartographer ros-iron-cartographer-ros \
 	ros-iron-navigation2 ros-iron-nav2-bringup
 
+# Clone ppl-ros2-env package
+RUN git clone https://github.com/parasollab/ppl-ros2-env.git -b turtlebot3
+
+# Clone ppl-ros package
+RUN git clone https://github.com/parasollab/ppl-ros.git
+
 # Install package dependencies
 WORKDIR /root/ppl_cc_ws
 # RUN apt-get update && rosdep install -r --from-paths . --ignore-src --rosdistro iron -y
@@ -135,6 +141,7 @@ RUN chmod -R +x /root/ppl_cc_ws/docker/ppl-crash-course/scripts/*
 # Setup the Bash shell environment with '/root/.bashrc'.
 RUN echo "source /root/ppl_cc_ws/docker/ppl-crash-course/scripts/initialize-bash-shell.sh" >> /root/.bashrc
 RUN echo "\nsource /root/ppl_cc_ws/install/setup.bash" >> /root/.bashrc
+RUN echo "\n export ROS_DOMAIN_ID=12" >> /root/.bashrc
 
 # RUN colcon build --merge-install --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 

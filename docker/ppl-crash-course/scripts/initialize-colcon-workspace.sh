@@ -62,7 +62,7 @@ if [ $FAILED ]; then
 fi
 
 # Initialize, build and source the underlay workspace.
-colcon build --symlink-install --cmake-args "-DCMAKE_BUILD_TYPE=Release"
+colcon build --symlink-install --executor sequential --cmake-args "-DCMAKE_BUILD_TYPE=Release"
 source /root/ppl_cc_ws/install/setup.bash
 
 ################################################################################
