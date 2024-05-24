@@ -78,6 +78,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     cmake \
     git \
+    python3-pip \
     python3-colcon-common-extensions \
     python3-flake8 \
     python3-rosdep \
@@ -137,6 +138,9 @@ WORKDIR /root/ppl_cc_ws
 # Copy the helper scripts to the working directory.
 COPY ./docker/ppl-crash-course/scripts/. /root/ppl_cc_ws/docker/ppl-crash-course/scripts/
 RUN chmod -R +x /root/ppl_cc_ws/docker/ppl-crash-course/scripts/*
+
+COPY ./requirements.txt /root/ppl_cc_ws/
+RUN pip3 install -r requirements.txt
 
 # Setup the Bash shell environment with '/root/.bashrc'.
 RUN echo "source /root/ppl_cc_ws/docker/ppl-crash-course/scripts/initialize-bash-shell.sh" >> /root/.bashrc
