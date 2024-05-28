@@ -101,7 +101,7 @@ RUN mkdir -p /root/ppl_cc_ws/src
 WORKDIR /root/ppl_cc_ws/src
 
 # Clone Moveit2 source code
-RUN git clone https://github.com/moveit/moveit2.git -b iron
+RUN git clone https://github.com/imngui/moveit2.git -b iron
 RUN for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_iron.repos"; test -r $f && echo $f); do vcs import < "$repo"; done
 
 # Clone UR Description package
