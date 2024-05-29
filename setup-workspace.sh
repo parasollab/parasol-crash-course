@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install optional packages/tools.
-apt-get update && apt-get install -y --no-install-recommends \
+sudo apt-get update && sudo apt-get install -y --no-install-recommends \
     inetutils-ping \
     iproute2 \
     gdb \
@@ -45,7 +45,7 @@ git clone -b ros2-devel https://github.com/ROBOTIS-GIT/DynamixelSDK.git
 git clone -b ros2-devel https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
 git clone -b ros2-devel https://github.com/ROBOTIS-GIT/turtlebot3.git
 git clone -b ros2-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
-apt-get update && apt-get install -y --no-install-recommends \
+sudo apt-get update && sudo apt-get install -y --no-install-recommends \
 	ros-iron-gazebo-* ros-iron-cartographer ros-iron-cartographer-ros \
 	ros-iron-navigation2 ros-iron-nav2-bringup
 
