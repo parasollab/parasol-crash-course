@@ -13,8 +13,7 @@ sudo apt-get update && sudo apt-get install -y --no-install-recommends \
     unzip \
     vim \
     less \
-    usbutils \
-    && rm -rf /var/lib/apt/lists/*
+    usbutils
 
 cd /home/ubuntu
 
