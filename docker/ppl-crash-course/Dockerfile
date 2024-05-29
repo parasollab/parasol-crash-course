@@ -106,7 +106,7 @@ RUN for repo in moveit2/moveit2.repos $(f="moveit2/moveit2_iron.repos"; test -r 
 
 # Clone MoveIt2 tutorials
 RUN git clone https://github.com/Parasol-Lab-Crash-Course-Summer-2024/moveit2_tutorials.git
-RUN vsc import < moveit2_tutorials/moveit2_tutorials.repos
+RUN vcs import < moveit2_tutorials/moveit2_tutorials.repos
 
 # Clone UR Description package
 RUN git clone https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git -b iron

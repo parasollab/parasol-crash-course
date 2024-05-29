@@ -45,9 +45,9 @@ services:
       # - /dev/:/dev/
       - crash-course-data:/root
     network_mode: host
-    extra_hosts:
-      - "ppl:127.0.0.1"
-      # - "ppl:10.193.101.90"
+    # extra_hosts:
+    #   - "ppl:127.0.0.1"
+    # - "ppl:10.193.101.90"
     command: /root/ppl_cc_ws/docker/ppl-crash-course/scripts/initialize-docker-container.sh
     shm_size: 1g # a PhoXi data size about 100MB.
 
