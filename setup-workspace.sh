@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install optional packages/tools.
-RUN apt-get update && apt-get install -y --no-install-recommends \
+apt-get update && apt-get install -y --no-install-recommends \
     inetutils-ping \
     iproute2 \
     gdb \

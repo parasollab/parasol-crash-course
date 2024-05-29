@@ -40,12 +40,26 @@ Then copy and paste the key into a new github ssh key
 ### 4. Clone your assignment repository
 
 ```sh
-git clone <github_link>
+git clone <github_link> -b vnc
 ```
 
 > Make sure that everything that you clone is inside of the `/home/ubuntu` directory otherwise it will not save your data.
 
-### 5. Build the ROS 2 workspace
+### 5. Give setup script permissions and run it
+
+```sh
+cd <repository_name>
+```
+
+```sh
+chmod +x setup-workspace.sh
+```
+
+```sh
+./setup-workspace.sh
+```
+
+### 6. Build the ROS 2 workspace
 
 ```sh
 cd /home/ubuntu/ppl_cc_ws
