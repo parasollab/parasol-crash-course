@@ -117,7 +117,8 @@ RUN git clone https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver -b
 # Clone Robotiq Gripper package
 RUN git clone https://github.com/PickNikRobotics/ros2_robotiq_gripper.git
 WORKDIR /root/ppl_cc_ws/src/ros2_robotiq_gripper
-RUN vcs import < ros2_robotiq_gripper.iron.repos
+# RUN vcs import < ros2_robotiq_gripper.iron.repos
+RUN vcs import < ros2_robotiq_gripper-not-released.rolling.repos
 
 # Clone TB3 package
 WORKDIR /root/ppl_cc_ws/src
